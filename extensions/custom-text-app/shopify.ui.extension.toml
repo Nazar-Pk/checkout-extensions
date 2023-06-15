@@ -1,0 +1,20 @@
+type = "checkout_ui_extension"
+name = "custom-text-app"
+
+extension_points = [
+    'Checkout::Dynamic::Render'
+]
+
+[settings]
+  [[settings.fields]]
+    key = "link_text"
+    type = "single_line_text_field"
+    name = "Link text"
+  [[settings.fields]]
+    key = "modal_text"
+    type = "multi_line_text_field"
+    name = "Modal text"
+  [[settings.fields]]
+    key = "states_exceptions"
+    type = "multi_line_text_field"
+    name = "States exceptions"
