@@ -6,10 +6,17 @@ render('Checkout::Dynamic::Render', () => <App/>);
 function App() {
     const {provinceCode} = useShippingAddress();
     const {link_text, modal_text, states_exceptions} = useSettings();
-    const states_arr = states_exceptions.split("\n");
-    const isShown = states_arr.includes(provinceCode);
+    let isShown;
 
-    if (isShown) {
+    if (!link_text || !modal_text) {
+        return null;
+    }
+
+    if (states_exceptions) {
+        isShown = states_exceptions.split("\n").includes(provinceCode);
+    }
+
+    if (!states_exceptions || (states_exceptions && isShown)) {
         return (
             <Link
                 overlay={
