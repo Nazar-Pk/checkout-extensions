@@ -7,9 +7,9 @@ function App() {
     const {provinceCode} = useShippingAddress();
     const {link_text, modal_text, states_exceptions} = useSettings();
     const states_arr = states_exceptions.split("\n");
-    const isHidden = states_arr.includes(provinceCode);
+    const isShown = states_arr.includes(provinceCode);
 
-    if (!isHidden) {
+    if (isShown) {
         return (
             <Link
                 overlay={
