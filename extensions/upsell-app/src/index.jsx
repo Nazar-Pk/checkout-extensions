@@ -56,7 +56,7 @@ function App() {
 
     return (
         <BlockStack>
-            {showBanner && (
+            {showBanner && title && (
                 <Banner title={title} status={"success"} collapsible={false}/>
             )}
         </BlockStack>

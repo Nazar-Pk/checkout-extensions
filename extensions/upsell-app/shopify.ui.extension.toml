@@ -12,7 +12,7 @@ extension_points = [
 [[settings.fields]]
   key = "trigger_products"
   type = "multi_line_text_field"
-  name = "Trigger product variant ids"
+  name = "Trigger product variant graphql api id"
 
 [[settings.fields]]
   key = "variant"
