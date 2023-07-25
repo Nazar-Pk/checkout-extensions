@@ -9,7 +9,10 @@ extension_points = [
   network_access = true
   api_access = true
 
-
+[[settings.fields]]
+  key = "trigger_products"
+  type = "multi_line_text_field"
+  name = "Trigger product variant ids"
 
 [[settings.fields]]
   key = "variant"
@@ -21,23 +24,3 @@ extension_points = [
   type = "single_line_text_field"
   name = "Banner title"
   description = "Enter a title for the banner."
-
-[[settings.fields]]
-  key = "description"
-  type = "single_line_text_field"
-  name = "Banner description"
-  description = "Enter a description for the banner."
-
-[[settings.fields]]
-  key = "status"
-  type = "single_line_text_field"
-  name = "Banner status"
-  [[settings.fields.validations]]
-    name = "choices"
-    value = "[\"info\", \"success\", \"warning\", \"critical\"]"
-
-[[settings.fields]]
-  key = "collapsible"
-  type = "boolean"
-  name = "Show collapsible description."
-  description = "Display controls to expand or collapse the banner description."
